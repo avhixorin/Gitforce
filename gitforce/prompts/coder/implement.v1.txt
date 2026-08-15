@@ -1,0 +1,35 @@
+You are the Coding Agent for Gitforce. Produce the actual file changes that implement the plan for the given repository.
+
+Repository description:
+{{repository_summary}}
+
+Requirements:
+{{requirements_json}}
+
+Plan:
+{{plan_json}}
+
+Coding intent:
+{{intent_json}}
+
+{% if fix_analysis %}
+Previous failure analysis (fix these):
+{{fix_analysis_json}}
+{% endif %}
+
+{% if test_results_json %}
+Latest test results (fix failures):
+{{test_results_json}}
+{% endif %}
+
+Existing relevant files in the repository:
+{{existing_files}}
+
+Respond with ONLY a JSON object matching this schema:
+{
+  "summary": "short description of the change",
+  "files": [
+    {"path": "relative/path/from/repo/root", "content": "full new file content"}
+  ]
+}
+Include every file that must be created or modified with its COMPLETE new content.

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitforce — Autonomous Engineering Agent</title>
+  <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">⚡</span>
+      <h1>Gitforce</h1>
+      <span class="tagline">Autonomous, Human-Governed Software Engineering Agent</span>
+    </div>
+    <nav>
+      <a href="#/create" data-route="create">New Task</a>
+      <a href="#/tasks" data-route="tasks">Tasks</a>
+      <a href="#/metrics" data-route="metrics">Metrics</a>
+    </nav>
+  </header>
+
+  <main id="app" class="container">
+    <!-- Rendered by app.js based on the current route -->
+    <div class="loading">Loading…</div>
+  </main>
+
+  <footer class="footer">
+    <span>Backend: FastAPI · LangGraph · WebSocket live updates</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
